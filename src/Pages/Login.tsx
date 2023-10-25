@@ -1,6 +1,6 @@
 export default function LoginPage() {
     return (
-        <div className="LoginPage">
+        <div className="AuthPages">
             <h1>Login</h1>
 
             <form>
@@ -10,6 +10,8 @@ export default function LoginPage() {
                 <label>Password:
                     <input></input>
                 </label>
+
+                <button type="submit">Login</button>
             </form>
         </div>
     )
