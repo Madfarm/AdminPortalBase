@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { AuthAPIBase, apiResponse } from '../Utility/SD';
 import { useNavigate } from 'react-router-dom';
+import { useAuthContext } from '../Context/AuthContext';
 
 export default function LoginPage() {
     interface loginFormDataType {
@@ -9,12 +10,14 @@ export default function LoginPage() {
         password: string,
     }
 
+    const { authData, signIn } = useAuthContext();
     const [loginFormData, setLoginFormData] = useState<loginFormDataType>({
         username: "",
         password: ""
     });
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    
 
     var handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setLoginFormData({...loginFormData, [e.target.name]: e.target.value})
@@ -25,10 +28,11 @@ export default function LoginPage() {
 
         await axios.post(AuthAPIBase + "/login", loginFormData)
             .then((response) => {
-                console.log(response);
+            
 
-                localStorage.setItem("userId", response.data.result.user.id);
-                localStorage.setItem("token", response.data.result.token);
+                signIn(response.data);
+
+                console.log(authData);
             })
             .catch(error => {
                 console.log(error)

@@ -1,16 +1,17 @@
 import { Link } from "react-router-dom";
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './Header.css';
+import { useAuthContext } from "../Context/AuthContext";
 
 export default function Header() {
-    const [token, setToken] = useState<string | null>(localStorage.getItem("token"));
+    const { authData } = useAuthContext();
 
     return (
         <nav className="Navbar">
             <Link to="/">Home</Link>
 
             <div className="AuthLinks">
-                {localStorage.getItem("token") ?
+                {authData.token ?
                 <>
                     <p>Logout</p>
                 </>
