@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { AuthAPIBase, apiResponse } from '../Utility/SD';
-import { Router, redirect } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginPage() {
     interface loginFormDataType {
@@ -13,6 +13,8 @@ export default function LoginPage() {
         username: "",
         password: ""
     });
+
+    const navigate = useNavigate()
 
     var handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setLoginFormData({...loginFormData, [e.target.name]: e.target.value})
@@ -34,8 +36,9 @@ export default function LoginPage() {
             console.log(error)
             console.log(AuthAPIBase + "/login")
         });
-
-        return redirect('/');
+        
+        navigate("/")
+        
     }
 
     return (
