@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { AuthAPIBase } from '../Utility/SD';
 
 export default function LoginPage() {
     interface loginFormDataType {
@@ -19,7 +20,9 @@ export default function LoginPage() {
 
     var handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        
+        axios.post(AuthAPIBase + "/login", loginFormData).then(response => {
+            console.log();
+        });
     }
 
     return (
