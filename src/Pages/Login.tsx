@@ -21,8 +21,18 @@ export default function LoginPage() {
 
     var handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        await axios.post(AuthAPIBase + "/login", loginFormData).then((response) => {
+
+        await axios.post(AuthAPIBase + "/login", loginFormData, {
+            headers: {
+                "Access-Control-Allow-Origin": '*'
+            }
+        })
+        .then((response) => {
             console.log(response);
+        })
+        .catch(error => {
+            console.log(error)
+            console.log(AuthAPIBase + "/login")
         });
 
         return redirect('/');
