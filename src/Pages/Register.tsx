@@ -1,13 +1,16 @@
-export default function LoginPage() {
+export default function RegisterPage() {
     return (
         <div className="AuthPages">
             <h1>Login</h1>
 
             <form>
-                <label>Username:
-                    <input placeholder="Username.."></input>
+                <label>Email:
+                    <input placeholder="Email.."></input>
                 </label>
                 <label>Password:
+                    <input placeholder="Password.."></input>
+                </label>
+                <label>Name:
                     <input placeholder="Password.."></input>
                 </label>
 
