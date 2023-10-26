@@ -1,4 +1,4 @@
-import { useState, FC, ReactNode } from "react";
+import { useState, FC, ReactNode, useContext } from "react";
 import * as React from 'react';
 
 interface IAuth {
@@ -37,4 +37,6 @@ export const AuthProvider: FC<React.PropsWithChildren<AuthProps>> = ({children})
         </AuthContext.Provider>
     )
 }
+
+export const useAuthContext = () => useContext(AuthContext);
 
