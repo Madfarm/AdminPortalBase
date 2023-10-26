@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 export default function LoginPage() {
     interface loginFormDataType {
@@ -14,6 +15,11 @@ export default function LoginPage() {
     var handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setLoginFormData({...loginFormData, [e.target.name]: e.target.value})
         console.log(loginFormData);
+    }
+
+    var handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        
     }
 
     return (
