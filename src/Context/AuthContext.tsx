@@ -1,5 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import { useState, FC, ReactNode } from "react";
+import * as React from 'react';
 
 interface IAuth {
     token: string | null;
@@ -13,7 +13,7 @@ type AuthContextType = {
 
 export const AuthContext = React.createContext<AuthContextType | null>(null);
 
-const AuthProvider: React.FC<React.ReactNode> = ({ children }) => {
+export const AuthProvider: FC = ({children}: {children: ReactNode}) => {
     const [authData, setAuthData] = useState<IAuth>({
         token: null,
         user: null
@@ -33,3 +33,4 @@ const AuthProvider: React.FC<React.ReactNode> = ({ children }) => {
         </AuthContext.Provider>
     )
 }
+
