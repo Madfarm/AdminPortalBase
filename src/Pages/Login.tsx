@@ -28,12 +28,7 @@ export default function LoginPage() {
 
         await axios.post(AuthAPIBase + "/login", loginFormData)
             .then((response) => {
-            
-
                 signIn(response.data.result);
-                console.log(response.data.result);
-
-                console.log(authData);
             })
             .catch(error => {
                 console.log(error)
