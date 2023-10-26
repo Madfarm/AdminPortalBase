@@ -6,6 +6,10 @@ interface IAuth {
     user: any | null;
 }
 
+interface AuthProps {
+    children: any
+}
+
 type AuthContextType = {
     authData: IAuth;
     signIn: (data: IAuth) => void;
@@ -13,7 +17,7 @@ type AuthContextType = {
 
 export const AuthContext = React.createContext<AuthContextType | null>(null);
 
-export const AuthProvider: FC = ({children}: {children: ReactNode}) => {
+export const AuthProvider: FC<React.PropsWithChildren<AuthProps>> = ({children}) => {
     const [authData, setAuthData] = useState<IAuth>({
         token: null,
         user: null
