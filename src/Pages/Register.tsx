@@ -1,7 +1,7 @@
 export default function RegisterPage() {
     return (
         <div className="AuthPages">
-            <h1>Login</h1>
+            <h1>Register</h1>
 
             <form>
                 <label>Email:
