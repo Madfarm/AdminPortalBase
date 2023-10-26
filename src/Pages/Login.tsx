@@ -26,6 +26,9 @@ export default function LoginPage() {
         await axios.post(AuthAPIBase + "/login", loginFormData)
         .then((response) => {
             console.log(response);
+
+            localStorage.setItem("userId", response.data.result.user.id);
+            localStorage.setItem("token", response.data.result.token);
         })
         .catch(error => {
             console.log(error)
