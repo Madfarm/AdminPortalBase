@@ -5,10 +5,10 @@ export default function Header() {
     return (
         <nav className="Navbar">
             <Link to="/">Home</Link>
-            
+
             <div className="AuthLinks">
                 <Link to="/login">Login</Link>
-
+                <Link to="/register">Register</Link>
             </div>
         </nav>
     )
