@@ -30,7 +30,8 @@ export default function LoginPage() {
             .then((response) => {
             
 
-                signIn(response.data);
+                signIn(response.data.result);
+                console.log(response.data.result);
 
                 console.log(authData);
             })
