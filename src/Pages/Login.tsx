@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 export default function LoginPage() {
     interface loginFormDataType {
@@ -11,16 +11,31 @@ export default function LoginPage() {
         password: ""
     });
 
+    var handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setLoginFormData({...loginFormData, [e.target.name]: e.target.value})
+        console.log(loginFormData);
+    }
+
     return (
         <div className="AuthPages">
             <h1>Login</h1>
 
             <form>
                 <label>Username:
-                    <input placeholder="Username.."></input>
+                    <input 
+                        placeholder="Username.."
+                        name="username"
+                        type='text'
+                        onChange={handleChange}
+                     />
                 </label>
                 <label>Password:
-                    <input placeholder="Password.."></input>
+                    <input 
+                        placeholder="Password.."
+                        name="password"
+                        type='text'
+                        onChange={handleChange} 
+                    />
                 </label>
 
                 <button type="submit">Login</button>
