@@ -9,12 +9,14 @@ import { AuthProvider } from './Context/AuthContext'
 function App() {
   return (
     <AuthProvider>
-      <Header />
-      <Routes>
-          <Route path="/" element={ <Home /> } />
-          <Route path="/login" element={ <LoginPage /> } />
-          <Route path="/register" element={ <RegisterPage /> } />
-      </Routes>
+      <div className='mainSquare'>
+        <Header />
+        <Routes>
+            <Route path="/" element={ <Home /> } />
+            <Route path="/login" element={ <LoginPage /> } />
+            <Route path="/register" element={ <RegisterPage /> } />
+        </Routes>
+      </div>
     </AuthProvider>
     
   )
