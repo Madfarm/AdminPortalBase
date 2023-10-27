@@ -16,7 +16,7 @@
   opacity: 0.9;
   min-width: 400px;
   max-width: 900px;
-  /* min-height: 350px; */
+  min-height: 250px;
 
   border: 1px solid darkgrey;
   border-radius: 5%;
@@ -31,6 +31,20 @@
   height: 100%;
 }
 
+.AuthPages > form > label {
+  align-self: flex-start;
+  height: 3vh;
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.AuthPages > form > label > input {
+  justify-self: flex-end;
+  width: 70%;
+}
+
 
 
 .submitBtn {
@@ -39,6 +53,7 @@
 
   height: 5vh;
   width: 30vw;
+  max-width: 300px;
   cursor: pointer;
 
   border: 1px;
