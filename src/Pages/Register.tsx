@@ -14,7 +14,7 @@ export default function RegisterPage() {
                     <input placeholder="Password.."></input>
                 </label>
 
-                <button className='submitBtn' type="submit">Login</button>
+                <button className='submitBtn' type="submit">Register</button>
             </form>
         </div>
     )
