@@ -61,7 +61,7 @@ export default function LoginPage() {
                     />
                 </label>
 
-                <button type="submit">Login</button>
+                <button className='submitBtn' type="submit">Login</button>
             </form>
         </div>
     )
