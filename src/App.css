@@ -6,30 +6,41 @@
 
 }
 
-.AuthPages > form {
-  display: flex;
-  flex-direction: column;
-  opacity: 1;
-}
-
-
 .mainSquare {
   padding-left: 2vh;
   padding-right: 2vh;
   padding-top: 2vh;
+  padding-bottom: 2vh;
   background-color: darkgrey;
 
   opacity: 0.9;
   min-width: 400px;
-  min-height: 400px;
+  max-width: 900px;
+  /* min-height: 350px; */
 
   border: 1px solid darkgrey;
   border-radius: 5%;
-
   
 }
 
+.AuthPages > form {
+  display: flex;
+  flex-direction: column;
+
+  /* border: 1px solid blue; */
+  height: 100%;
+}
+
+
+
 .submitBtn {
   margin-top: 5vh;
-  
+  align-self: center;
+
+  height: 5vh;
+  width: 30vw;
+  cursor: pointer;
+
+  border: 1px;
+  border-radius: 5%;
 }
