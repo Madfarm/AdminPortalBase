@@ -13,9 +13,11 @@
 
 
 .mainSquare {
-  border: 1px solid blue;
-  padding: 1vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  padding-top: 2vh;
   background-color: darkgrey;
 
   min-width: 400px;
+  min-height: 400px;
 }
