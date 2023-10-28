@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink,  } from "react-router-dom";
 import { useContext, useState } from 'react';
 import './Header.css';
 import { useAuthContext } from "../Context/AuthContext";
@@ -17,8 +17,8 @@ export default function Header() {
                 </>
                 :
                 <>
-                    <Link to="/login">Login</Link>
-                    <Link to="/register">Register</Link>
+                    <NavLink to="/login">Login</NavLink>
+                    <NavLink to="/register">Register</NavLink>
                 </>
                 }
             </div>
