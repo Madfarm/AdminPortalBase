@@ -9,8 +9,12 @@
 .AuthLinks > a {
     margin-left: 1vh;
     font-size: 15px;
+
+    padding: 1vw;
 }
 
 .AuthLinks > a.active {
-    border: 4px solid red;
+    border-top: 1px solid rgb(37, 36, 36);
+    border-left: 1px solid rgb(37, 36, 36);
+    border-right: 1px solid rgb(37, 36, 36);
 }
