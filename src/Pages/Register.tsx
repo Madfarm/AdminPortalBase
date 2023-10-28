@@ -11,7 +11,7 @@ export default function RegisterPage() {
                     <input placeholder="Password.."></input>
                 </label>
                 <label>Name:
-                    <input placeholder="Password.."></input>
+                    <input placeholder="Name.."></input>
                 </label>
 
                 <button className='submitBtn' type="submit">Register</button>
