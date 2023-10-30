@@ -21,6 +21,11 @@ export default function LoginPage() {
         password: ""
     });
 
+    const [errorMessages, setErrorMessages] = useState<errorText>({
+        username: "",
+        password: ""
+    })
+
     const navigate = useNavigate();
     
 
@@ -28,8 +33,36 @@ export default function LoginPage() {
         setLoginFormData({...loginFormData, [e.target.name]: e.target.value})
     }
 
+    var validateForm = (): boolean => {
+        var isValid: boolean = true;
+
+        var newErrors: errorText = {
+            username: '',
+            password: ''
+        }
+
+        if (!loginFormData.username.length) {
+            newErrors.username = 'Username is required';
+            isValid = false;
+        }
+
+        if (!loginFormData.password.length) {
+            newErrors.password = 'Password is required';
+            isValid = false;
+        } else if (loginFormData.password.length < 6) {
+            newErrors.password = 'Password must be at least 6 characters';
+            isValid = false;
+        }
+
+        setErrorMessages(newErrors);
+
+        return isValid;
+    }
+
     var handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        if (!validateForm) return;
 
         await axios.post(AuthAPIBase + "/login", loginFormData)
             .then((response) => {
