@@ -5,14 +5,17 @@ export default function RegisterPage() {
 
             <form>
                 <label>Email:
-                    <input placeholder="Email.."></input>
+                    <input placeholder="Email.."/>
                 </label>
+                <p className='validationText'></p>
                 <label>Password:
-                    <input placeholder="Password.."></input>
+                    <input placeholder="Password.."/>
                 </label>
+                <p className='validationText'></p>
                 <label>Name:
-                    <input placeholder="Name.."></input>
+                    <input placeholder="Name.."/>
                 </label>
+                <p className='validationText'></p>
 
                 <button className='submitBtn' type="submit">Register</button>
             </form>
