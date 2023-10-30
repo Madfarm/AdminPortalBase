@@ -29,7 +29,7 @@ export default function LoginPage() {
     const navigate = useNavigate();
     
 
-    var handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    var handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
         setLoginFormData({...loginFormData, [e.target.name]: e.target.value})
     }
 
@@ -59,7 +59,7 @@ export default function LoginPage() {
         return isValid;
     }
 
-    var handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    var handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
         e.preventDefault();
 
         if (!validateForm()) return;
