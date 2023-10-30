@@ -90,7 +90,7 @@ export default function LoginPage() {
                         onChange={handleChange}
                      />
                 </label>
-                <p className='validationText'>{errorMessages.username}</p>
+                <span className='validationText'>{errorMessages.username}</span>
                 <label>Password:
                     <input 
                         placeholder="Password.."
@@ -99,7 +99,7 @@ export default function LoginPage() {
                         onChange={handleChange} 
                     />
                 </label>
-                <p className='validationText'>{errorMessages.password}</p>
+                <span className='validationText'>{errorMessages.password}</span>
 
                 <button className='submitBtn' type="submit">Login</button>
             </form>
