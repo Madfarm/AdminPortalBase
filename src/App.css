@@ -50,6 +50,11 @@
   width: 70%;
 }
 
+.validationText { 
+  color: red;
+  font-size: 18px;
+}
+
 
 
 .submitBtn {
