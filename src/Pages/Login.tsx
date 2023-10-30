@@ -62,7 +62,7 @@ export default function LoginPage() {
     var handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        if (!validateForm) return;
+        if (!validateForm()) return;
 
         await axios.post(AuthAPIBase + "/login", loginFormData)
             .then((response) => {
@@ -90,7 +90,7 @@ export default function LoginPage() {
                         onChange={handleChange}
                      />
                 </label>
-                <p className='validationText'>ass</p>
+                <p className='validationText'>{errorMessages.username}</p>
                 <label>Password:
                     <input 
                         placeholder="Password.."
@@ -99,7 +99,7 @@ export default function LoginPage() {
                         onChange={handleChange} 
                     />
                 </label>
-                <p className='validationText'>ass</p>
+                <p className='validationText'>{errorMessages.password}</p>
 
                 <button className='submitBtn' type="submit">Login</button>
             </form>
