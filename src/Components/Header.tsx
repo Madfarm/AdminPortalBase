@@ -13,7 +13,7 @@ export default function Header() {
             <div className="AuthLinks">
                 {authData.token ?
                 <>
-                    <Link to="/">Logout</Link>
+                    <NavLink to="/">Logout</NavLink>
                 </>
                 :
                 <>

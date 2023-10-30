@@ -10,6 +10,11 @@ export default function LoginPage() {
         password: string,
     }
 
+    interface errorText {
+        username: string,
+        password: string
+    }
+
     const { authData, signIn } = useAuthContext();
     const [loginFormData, setLoginFormData] = useState<loginFormDataType>({
         username: "",
@@ -52,6 +57,7 @@ export default function LoginPage() {
                         onChange={handleChange}
                      />
                 </label>
+                <p className='validationText'>ass</p>
                 <label>Password:
                     <input 
                         placeholder="Password.."
@@ -60,6 +66,7 @@ export default function LoginPage() {
                         onChange={handleChange} 
                     />
                 </label>
+                <p className='validationText'>ass</p>
 
                 <button className='submitBtn' type="submit">Login</button>
             </form>
