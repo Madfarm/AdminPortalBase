@@ -4,7 +4,10 @@ import { AuthAPIBase, apiResponse } from '../../Utility/SD';
 import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../../Context/AuthContext';
 
-
+/**
+ * Responsible for handling behavior of the Login Page
+ * @returns handleSubmit, handleChange, and errorMessages state
+ */
 export const useLoginPage = () => {
     interface loginFormDataType {
         username: string,
