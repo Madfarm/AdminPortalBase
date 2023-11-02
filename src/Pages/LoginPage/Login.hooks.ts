@@ -3,23 +3,15 @@ import axios from 'axios';
 import { AuthAPIBase, apiResponse } from '../../Utility/SD';
 import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../../Context/AuthContext';
+import { loginFormDataType, errorText } from './Login.types';
 
 /**
  * Responsible for handling behavior of the Login Page
  * @returns handleSubmit, handleChange, and errorMessages state
  */
 export const useLoginPage = () => {
-    interface loginFormDataType {
-        username: string,
-        password: string,
-    }
-
-    interface errorText {
-        username: string,
-        password: string
-    }
-
     const { authData, signIn } = useAuthContext();
+    
     const [loginFormData, setLoginFormData] = useState<loginFormDataType>({
         username: "",
         password: ""
