@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Home from './Pages/Home'
 import Header from './Components/Header'
-import LoginPage from './Pages/Login'
+import LoginPage from './Pages/LoginPage/Login'
 import RegisterPage from './Pages/Register'
 import { AuthProvider } from './Context/AuthContext'
 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { AuthAPIBase, apiResponse } from '../Utility/SD';
+import { AuthAPIBase, apiResponse } from '../../Utility/SD';
 import { useNavigate } from 'react-router-dom';
-import { useAuthContext } from '../Context/AuthContext';
+import { useAuthContext } from '../../Context/AuthContext';
 
 export default function LoginPage() {
     interface loginFormDataType {
