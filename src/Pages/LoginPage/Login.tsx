@@ -1,5 +1,9 @@
 import { useLoginPage } from "./Login.hooks"
 
+/**
+ * Responsible for rendering the LoginPage component
+ * @returns The template for the login page
+ */
 export default function LoginPage() {
     const {handleChange, handleSubmit, errorMessages} = useLoginPage();
 
