@@ -11,7 +11,7 @@ import { loginFormDataType, errorText } from './Login.types';
  */
 export const useLoginPage = () => {
     const { authData, signIn } = useAuthContext();
-    
+
     const [loginFormData, setLoginFormData] = useState<loginFormDataType>({
         username: "",
         password: ""
@@ -54,7 +54,13 @@ export const useLoginPage = () => {
 
         return isValid;
     }
-
+    
+    /**
+     * Handles the form submission of the login page
+     * 
+     * @param Event Object
+     * @returns void 
+     */
     var handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
         e.preventDefault();
 
