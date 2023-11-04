@@ -54,9 +54,9 @@ export const useLoginPage = () => {
 
         return isValid;
     }
-    
+
     /**
-     * Handles the form submission of the login page
+     * Validates inputs from login form and then send a POST request to backend AuthAPI to receive User and JWT before placing both in the application state
      * 
      * @param Event Object
      * @returns void 
