@@ -1,5 +1,11 @@
 type RegisterFormType = {
-    name: string,
+    email: string,
     password: string,
-    email: string
+    name: string
+}
+
+type RegisterErrorText = {
+    email: string,
+    password: string,
+    name: string
 }
