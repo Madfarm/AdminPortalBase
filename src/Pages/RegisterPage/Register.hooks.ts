@@ -18,8 +18,6 @@ export const useRegisterPage = () => {
     var handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
         const { name, value } = e.target;
         setRegisterForm({...registerForm, [name]: value});
-
-        console.log(registerForm);
     } 
 
     return { handleChange };
